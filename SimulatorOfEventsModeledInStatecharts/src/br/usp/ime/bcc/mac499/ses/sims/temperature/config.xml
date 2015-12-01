@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	
+	<target name="EarthAtmosphereFSM.xml"/>
+	
+	<!-- 
+	Max and Min temperatures accepted by the temperature sensor.
+	
+	abs is the attribute that indicates what type data structure
+	represents a temperature.
+	
+	ini is the temperature in the first state of the FSM. 
+	
+	Obs:
+		abs possibilities:
+			- event
+			- state
+	-->
+	<temperature ini="15.04" max="16" min="-65" abs="state" />
+	
+	<!-- 
+	This optional tag is an auxiliary element to help the simulator decide how to pick a temperature 
+	within a range. If the tester choose not to define this tag, it will be up to him to program a logic 
+	to choose this temperature, unless he doesn't want to or is not needed.
+	
+	pick possibilities:
+		- random_ascending
+		- constant_ascending
+	-->
+	<temperature_within_range pick="random_ascending" />
+	
+	<!-- 
+	prob indicates the probability of generate a temperature not
+	accepted by the temperature sensor.
+	-->
+	<error prob="0.1"/>
+	
+	<!-- 
+	All strategies:
+		- WalkByProbability
+		- WalkByHighTemperature
+	-->
+	<strategy name="WalkByHighTemperature"/>
+	
+</config>

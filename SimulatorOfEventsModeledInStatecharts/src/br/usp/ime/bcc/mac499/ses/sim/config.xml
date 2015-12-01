@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	
+	<simulator name="TemperatureSim"/>
+	
+	<sample size="13" num="5"/>
+	
+<!-- 	<stop> -->
+<!-- 		<final name="-56.46"/> -->
+<!-- 		<final name="[-10.00,0.00]"/> -->
+<!-- 	</stop> -->
+	
+</config>
